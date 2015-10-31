@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
+
+
 gem 'devise'
+gem 'devise-bootstrap-views', '0.0.6'
+
 gem 'rails', '4.2.4'
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
