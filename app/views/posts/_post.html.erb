@@ -1,3 +1,25 @@
 <div class="row">
-  <%= post.title %>
+  <div class="col-md-2">
+    <div class="well block-vote">
+      <a href="#" class="vote-up"><i class="fa fa-arrow-up"></i></a>
+      <span class="vote-count">10 votes</span>
+      <a href="#" class="vote-down"><i class="fa fa-arrow-down"></i></a>
+    </div><!-- well -->
+  </div><!-- col-md-1 -->
+  <div class="col-md-9">
+    <div class="well">
+      <% post.categories.each do |category| %>
+        <span class="badge">
+          <%= link_to category.name, "#" %>
+        </span>
+      <% end %>
+      <h3><%= post.title %></h3>
+      <p><%= post.content %></p>
+      <p>
+        <span class="quiet">posted by</span> <%= link_to "Steven", "#" %>
+        <small>at 10/30/2015  7:43am PDT</small>
+      </p>
+      <%= link_to "0 comments", "#" %>
+    </div><!-- well -->
+  </div><!-- col-md-9 -->
 </div><!-- row -->

@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+h1{
+  margin-bottom: 35px;
+}
+
+#main-navbar > ul.nav.navbar-nav.navbar-right > li > ul > li > a > i{
+  margin-right: 8px;
+}
+
+#main-navbar > ul.nav.navbar-nav.navbar-right > li.dropdown > a{
+  padding: 10px 0;
+  margin-right: 60px;
+}
+
+#main-navbar > ul.nav.navbar-nav.navbar-right > li.dropdown > a > img.avatar_img{
+  width: 30px;
+  height: 30px;
+}

@@ -1,3 +1,17 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.block-vote{
+  text-align: center;
+}
+
+.vote-up, .vote-down{
+  display: block;
+}
+
+.vote-count{
+  display: block;
+  margin: 3px 0;
+  font-size: 16px;
+}
