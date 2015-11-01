@@ -1,13 +1,14 @@
 class PostsController < ApplicationController
 
   before_filter :find_post, only: [:show]
+  before_filter :find_categories, only: [:index]
 
   def index
     @posts = Post.all
   end
 
   def show
-    
+
   end
 
   def new
@@ -33,5 +34,9 @@ class PostsController < ApplicationController
 
   def find_post
     @post = Post.find(params[:id])
+  end
+
+  def find_categories
+    @categories = Category.all
   end
 end

@@ -6,11 +6,11 @@
       <a href="#" class="vote-down"><i class="fa fa-arrow-down"></i></a>
     </div><!-- well -->
   </div><!-- col-md-1 -->
-  <div class="col-md-9">
+  <div class="col-md-8">
     <div class="well">
       <% post.categories.each do |category| %>
         <span class="badge">
-          <%= link_to category.name, "#" %>
+          <%= link_to category.name, category %>
         </span>
       <% end %>
       <h3><%= post.title %></h3>
@@ -21,5 +21,8 @@
       </p>
       <%= link_to "0 comments", "#" %>
     </div><!-- well -->
-  </div><!-- col-md-9 -->
+  </div><!-- col-md-8 -->
+  <div class="col-md-2">
+
+  </div><!-- col-md-2 -->
 </div><!-- row -->

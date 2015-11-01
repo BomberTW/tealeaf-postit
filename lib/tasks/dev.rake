@@ -11,7 +11,7 @@ namespace :dev do
       )
     end
 
-    200.times do
+    300.times do
       i=rand(51)
       j=rand(51)
       PostCategory.create(
