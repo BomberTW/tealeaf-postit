@@ -9,6 +9,13 @@ namespace :dev do
         title: "This is no#{i} post",
         content: "Contents for post no#{i}"
       )
+      10.times do |j|
+        Comment.create(
+          body: "這是第#{(i-1)*50 + j}個評論",
+          user_id: i,
+          post_id: 50-i
+        )
+      end
     end
 
     300.times do
