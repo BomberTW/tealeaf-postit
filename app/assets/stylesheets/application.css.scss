@@ -15,7 +15,7 @@
  */
 
 h1{
-  margin-bottom: 35px;
+  // margin-bottom: 10px;
 }
 
 #main-navbar > ul.nav.navbar-nav.navbar-right > li > ul > li > a > i{
@@ -39,4 +39,15 @@ h1{
 .dropdown-menu{
   max-height: 300px;
   overflow-y: auto;
+}
+
+/**
+ * ----------------------------------------------------------------------------------------
+ * Component
+ * ----------------------------------------------------------------------------------------
+ */
+
+.btn-right-side{
+  margin: 20px;
+  margin-right: 200px;
 }

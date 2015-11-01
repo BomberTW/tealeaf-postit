@@ -13,8 +13,10 @@
           <%= link_to category.name, category %>
         </span>
       <% end %>
-      <h3><%= post.title %></h3>
-      <p><%= post.content %></p>
+      <h3><%= link_to post.title, post %></h3>
+      <div class="post-content">
+          <%= sanitize post.content.gsub(/\n/, '<br/>') %>
+      </div><!-- post-content -->
       <p>
         <span class="quiet">posted by</span> <%= link_to "Steven", "#" %>
         <small>at 10/30/2015  7:43am PDT</small>

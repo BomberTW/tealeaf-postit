@@ -1,7 +1,10 @@
-<h1>All Posts</h1>
+<div class="container">
+  <h1>All Posts</h1>
+  <%= link_to "Add Post", new_post_path , class: "btn btn-primary pull-right btn-right-side"%>
+</div><!-- container -->
+
 <div class="container">
   <% @posts.each do |post| %>
     <%= render post%>
-
   <% end %>
 </div><!-- container -->
