@@ -40,7 +40,7 @@ class PostsController < ApplicationController
   end
 
   def find_post
-    @post = Post.find(params[:id])
+    @post = Post.where("slug = ?", params[:id]).first
   end
 
   def find_categories
