@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vote: false
+  voted_type: MyString
+  voted_id: 1
+
+two:
+  vote: false
+  voted_type: MyString
+  voted_id: 1

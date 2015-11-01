@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151031201055) do
+ActiveRecord::Schema.define(version: 20151101105717) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -69,5 +69,14 @@ ActiveRecord::Schema.define(version: 20151031201055) do
 
   add_index "views", ["email"], name: "index_views_on_email", unique: true
   add_index "views", ["reset_password_token"], name: "index_views_on_reset_password_token", unique: true
+
+  create_table "votes", force: :cascade do |t|
+    t.boolean  "vote"
+    t.string   "voted_type"
+    t.integer  "voted_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
 
 end
