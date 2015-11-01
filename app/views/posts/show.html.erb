@@ -1,8 +1,13 @@
 <div class="container">
   <%= render 'categories/categories', categories: @post.categories %>
-  <h1><%= @post.title %></h1>
-  <div class="post-content">
-    <%= @post.content %>
-  </div><!-- post-content -->
+  <div class="t-margin">
+    <h1><%= @post.title %></h1>
+    <textarea rows="8" cols="40" disabled>
+      <%= @post.content %>
+    </textarea>
+  </div><!-- post-show -->
+  <% @post.comments.each do |comment| %>
+    <%= render comment %>
+  <% end %>
 
 </div><!-- container -->

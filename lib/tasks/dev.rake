@@ -2,6 +2,12 @@ namespace :dev do
   desc "Generate fake data"
   task fakeup: ['db:schema:load', :environment] do
     50.times do |i|
+      User.create!(
+        name: "Steven no#{i}",
+        email: "guy#{i}@gmail.com",
+        password: "12345678",
+        password_confirmation: "12345678"
+      )
       Category.create(
         name: "Category no#{i}"
       )
@@ -11,8 +17,8 @@ namespace :dev do
       )
       10.times do |j|
         Comment.create(
-          body: "這是第#{(i-1)*50 + j}個評論",
-          user_id: i,
+          body: "這是第#{ i*50 + j}個評論",
+          user_id: 1,
           post_id: 50-i
         )
       end
