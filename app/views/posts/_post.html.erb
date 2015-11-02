@@ -1,9 +1,13 @@
 <div class="row">
   <div class="col-md-2">
     <div class="well block-vote">
-      <a href="#" class="vote-up"><i class="fa fa-arrow-up"></i></a>
-      <span class="vote-count">10 votes</span>
-      <a href="#" class="vote-down"><i class="fa fa-arrow-down"></i></a>
+      <%= link_to vote_post_path(post, vote: true), method: :post, class: "vote-up" do %>
+        <i class="fa fa-arrow-up"></i>
+      <% end %>
+      <span class="vote-count"><%= post.total_votes %> votes</span>
+      <%= link_to vote_post_path(post, vote: false), method: :post, class: "vote-down" do %>
+        <i class="fa fa-arrow-down"></i>
+      <% end %>
     </div><!-- well -->
   </div><!-- col-md-1 -->
   <div class="col-md-8">

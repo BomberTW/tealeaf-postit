@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
-  before_filter :find_post, only: [:show]
-  
+  before_filter :find_post, only: [:show, :vote]
+
   def index
     @posts = Post.all.includes(:categories).order(id: :desc)
   end
@@ -30,6 +30,12 @@ class PostsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def vote
+    Vote.create(vote: params[:vote], voteable: @post, user_id: current_user.id)
+    flash[:notice] = "Your vote was counted."
+    redirect_to posts_path
   end
 
   private
