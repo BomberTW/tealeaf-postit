@@ -18,6 +18,7 @@ group :development, :test do
   gem 'pry'
   gem 'byebug'
   gem "bullet"
+  gem 'meta_request'
 end
 
 group :development do

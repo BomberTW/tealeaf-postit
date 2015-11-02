@@ -18,8 +18,10 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <% Category.all.each do |cate| %>
-                <li><%= link_to cate.name, cate %></li>
+              <% cache [@categories] do %>
+                <% @categories.each do |cate| %>
+                  <li><%= link_to cate.name, cate %></li>
+                <% end %>
               <% end %>
             </ul>
           </li>
@@ -40,7 +42,7 @@
                   <% end %>
                 </li>
                 <li>
-                  <%= link_to user_registration_path do %>
+                  <%= link_to "#" do %>
                     <i class="fa fa-user"></i>View Prorile
                   <% end %>
                 </li>

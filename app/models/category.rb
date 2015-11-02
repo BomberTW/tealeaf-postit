@@ -12,5 +12,5 @@ class Category < ActiveRecord::Base
   def generate_slug
     self.slug = self.name.gsub(" ", "-").downcase
   end
-
+  
 end

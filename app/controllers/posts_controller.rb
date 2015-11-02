@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.includes(:categories).order(id: :desc)
+    @categories = Category.all
   end
 
   def show
@@ -41,9 +42,5 @@ class PostsController < ApplicationController
 
   def find_post
     @post = Post.where("slug = ?", params[:id]).first
-  end
-
-  def find_categories
-    @categories = Category.all
   end
 end

@@ -15,5 +15,5 @@ class User < ActiveRecord::Base
 
   def to_param
     self.slug
-  end
+  end  
 end
