@@ -9,6 +9,8 @@ class CategoriesController < ApplicationController
   private
 
   def find_category
-    @category = Category.find(params[:id])
+    # @category = Category.find(params[:id])
+    @caetgory = Category.where("slug = ?", params[:id]).first
   end
+
 end

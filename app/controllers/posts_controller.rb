@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @comments = @post.comments
+    @comments = Post.includes(comments: [:user]).where("slug = ?", params[:id]).first
   end
 
   def new

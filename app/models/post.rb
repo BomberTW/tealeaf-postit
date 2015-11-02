@@ -6,11 +6,13 @@ class Post < ActiveRecord::Base
   has_many :categories, through: :post_categories
   has_many :comments
 
-  def generate_slug
-    self.slug = self.title.gsub(" ", "-").downcase
-  end
-
   def to_param
     self.slug
+  end
+
+  private
+
+  def generate_slug
+    self.slug = self.title.gsub(" ", "-").downcase
   end
 end
