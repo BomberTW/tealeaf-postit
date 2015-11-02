@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_filter :find_categories, only: [:index]
 
   def index
-    @posts = Post.all.order(id: :desc)
+    @posts = Post.all.includes(:categories).order(id: :desc)
   end
 
   def show

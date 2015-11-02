@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-
-
 gem 'devise'
 gem 'devise-bootstrap-views', '0.0.6'
 
@@ -19,6 +17,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'pry'
   gem 'byebug'
+  gem "bullet"
 end
 
 group :development do
