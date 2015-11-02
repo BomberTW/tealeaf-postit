@@ -13,5 +13,4 @@ class Category < ActiveRecord::Base
     self.slug = self.name.gsub(" ", "-").downcase
   end
 
-
 end
