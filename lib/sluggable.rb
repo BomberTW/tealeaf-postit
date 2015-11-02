@@ -1,17 +1,16 @@
 module Sluggable
-  extend ActiveSupport:Concern
+  extend ActiveSupport::Concern
 
-  include do
-    before_save :generates_slug!
+  included do
+    before_save :generate_slug!
+    class_attribute :slug_column
   end
 
   def to_param
-    slug
+    self.slug
   end
 
-  private
-
-  def generate_slug
+  def generate_slug!
     the_slug = to_slug(title)
     post = self.class.find_by slug: the_slug
     count = 2
@@ -40,7 +39,7 @@ module Sluggable
     str.downcase
   end
 
-  module ClassMethod
+  module ClassMethods
     def sluggable_column(col_name)
       self.slug_column = col_name
     end

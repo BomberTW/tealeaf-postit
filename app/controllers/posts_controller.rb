@@ -1,11 +1,9 @@
 class PostsController < ApplicationController
 
   before_filter :find_post, only: [:show]
-  before_filter :find_categories, only: [:index]
-
+  
   def index
     @posts = Post.all.includes(:categories).order(id: :desc)
-    @categories = Category.all
   end
 
   def show
